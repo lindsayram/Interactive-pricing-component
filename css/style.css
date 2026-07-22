@@ -1,0 +1,84 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+/* Général */
+:root{
+    --bg:hsl(230, 100%, 99%);
+    --bgcomponent:hsl(0, 0%, 100%);
+    --text:hsl(225, 20%, 60%);
+    --titlecolor:hsl(227, 35%, 25%);
+
+    --dotbarcolor:hsl(174, 86%, 45%);
+    --barcolor:hsl(174, 77%, 80%);
+    --emptybar:hsl(224, 65%, 95%);
+
+    --discounttext:hsl(15, 100%, 70%);
+    --discountbg:hsl(0, 89%, 96%);
+
+    --CTAtext:hsl(226, 100%, 87%);
+    --CTAbg: hsl(227, 35%, 25%);
+
+    --togglebg:hsl(223, 50%, 87%);
+}
+
+*{
+    margin: 0;
+    font-family: "Manrope", sans-serif;
+    list-style: none;
+}
+
+/* desktop */
+html{
+    font-size: 15px;
+    margin: auto;
+    max-width: 1440px;
+    
+}
+
+main{
+    background-color: var(--bg);
+    padding: 50px;
+
+    #title{
+        text-align: center;
+        background-image: url("/images/pattern-circles.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 50px;
+
+        p{
+            color:var(--text)
+        }
+    }
+
+    #components{
+        background-color: var(--bgcomponent);
+
+        #dynamic{
+            display: flex;
+            justify-content: space-around;
+
+            p{
+                color: var(--text);
+                font-weight: 600;
+            }
+        }
+
+        #bar{
+            display: flex;
+            justify-content: center;
+
+            input{
+                -webkit-appearance: none;
+                background: linear-gradient(to right, var(--dotbarcolor) 75%, var(--emptybar) 25%);
+                width: 50em;
+                border-radius: 8px;
+
+                :focus::-webkit-slider-thumb{
+                    -webkit-appearance: none;
+                    background-image: url('/images/icon-slider.svg');
+                }
+            }
+        }
+    }
+}

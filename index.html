@@ -5,35 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
   
   <title>Frontend Mentor | Interactive pricing component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
+  <!-- <style>
     .attribution { font-size: 0.6875rem; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  </style> -->
 </head>
 <body>
+  <main>
+    <section id="title">
+      <h1>Simple, traffic-based pricing</h1>
+      <p>Sign-up for our 30-day trial. No credit card required.</p> 
+    </section>
 
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
+    <section id="components">
+      <div id="dynamic">
+        <p id="pageviews">Pageviews</p>
+        <p id="price">$ /month</p>
+      </div>
+      <div id="bar">
+        <input type="range" min= "8" max="36" step="6">
+      </div>
+      <div id="toggle-cta">
+        <p>Monthly Billing</p>
+        <p>Yearly Billing <span>25% discount</span></p>
+      </div>
+      
+      <div id="check">
+        <ul>
+          <li><img src="images/icon-check.svg" alt="icon-check">Unlimited websites</li>
+          <li><img src="images/icon-check.svg" alt="icon-check">100% data ownership</li>
+          <li><img src="images/icon-check.svg" alt="icon-check">Email reports</li>
+        </ul>
 
-  Pageviews
-  $ /month
+        <a href="">Start my trial</a>
+      </div>
+      
+    </section>
 
-  Monthly Billing
-  Yearly Billing 25% discount
+    
+  </main>
 
-  Unlimited websites
-  100% data ownership
-  Email reports
-
-  Start my trial
-  
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Lindsayram</a>.
   </footer>
 </body>
+<script src="js/script.js"></script>
 </html>
