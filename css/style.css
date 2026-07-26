@@ -32,7 +32,6 @@ html{
     font-size: 15px;
     margin: auto;
     max-width: 1440px;
-    
 }
 
 main{
@@ -70,18 +69,23 @@ main{
             margin: 25px 0;
             align-items: center;
 
-            p{
+            #pageviews{
                 color: var(--text);
                 font-weight: 600;
-
+                letter-spacing: 0.1rem;
             }
 
             #price{
-                #display{
+                font-size: 1.3rem;
+                color: var(--text);
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+
+                #display, #symbol{
                     font-size: 3rem;
                     color: var(--CTAbg);
                     font-weight: 800;
-                    
                 }
             }
         }
@@ -95,10 +99,28 @@ main{
                 background: linear-gradient(to right, var(--dotbarcolor) 75%, var(--emptybar) 25%);
                 width: 50em;
                 border-radius: 8px;
+                position: relative;
+                
+                .thumb{
+                    position: absolute;
+                    background-color: var(--barcolor);
+                    border-radius: 30px;
+                }
 
+                .thumb::before{
+                    position: absolute;
+                    content: "";
+                    height: 20px;
+                    width: 20px;
+                    left: 4px;
+                    bottom: 2px;
+                    background-color: var(--barcolor);
+                    border-radius: 50%;
+                }
                 :focus::-webkit-slider-thumb{
                     -webkit-appearance: none;
                     background-image: url('/images/icon-slider.svg');
+                    cursor: pointer;
                 }
             }
         }
@@ -108,12 +130,12 @@ main{
             justify-content: center;
             margin: 40px 0px;
             align-items: center;
-                gap: 20px;
+            gap: 20px;
 
             .switch{
                 position: relative;
                 display: inline-block;
-                width: 60px;
+                width: 53px;
                 height: 24px;
 
                 input{
@@ -143,7 +165,6 @@ main{
                     transition: 0.4s;
                     background-color: var(--bg);
                     border-radius: 50%;
-
                 }
 
                 input:checked + .slider{
@@ -203,7 +224,34 @@ main{
                 background-color: var(--CTAbg);
                 padding: 12px 40px;
                 border-radius: 25px;
+                &:hover{
+                    color: var(--bg);
+                }
             }
         }
     }
 }
+/* version tablette.. */
+
+/* Mobile 375px */
+
+@media screen and (min-width: 375px){
+    main{
+        #components{
+            display: grid;
+
+            #dynamic{
+               display: grid ;
+            }
+
+            #bar{
+                width: fit-content;
+            }
+
+            #toggle-cta{
+
+            }
+        }
+    }
+}
+    
