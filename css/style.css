@@ -67,10 +67,22 @@ main{
         #dynamic{
             display: flex;
             justify-content: space-around;
+            margin: 25px 0;
+            align-items: center;
 
             p{
                 color: var(--text);
                 font-weight: 600;
+
+            }
+
+            #price{
+                #display{
+                    font-size: 3rem;
+                    color: var(--CTAbg);
+                    font-weight: 800;
+                    
+                }
             }
         }
 
