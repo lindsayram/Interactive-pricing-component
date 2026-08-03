@@ -32,7 +32,7 @@ function discount () {
 
 // To change price with discount
 function updateDisplay (){
-    if(toggle.checked == true) {
+    if(toggle.checked === true) {
         discount();
     } else {
         updateValue();
